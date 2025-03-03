@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wypożyczalnia Sprzętu Sportowego</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Projekt.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Wypożyczalnia Sprzętu Sportowego</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" onclick="pokaz('home')">Strona główna</a></li>
+                <li><a href="#oferta" onclick="pokaz('oferta')">Oferta</a></li>
+                <li><a href="#cennik" onclick="pokaz('cennik')">Cennik</a></li>
+                <li><a href="#kontakt" onclick="pokaz('kontakt')">Kontakt</a></li>
+                <li><a href="#rezerwacja" onclick="pokaz('rezerwacja')">Rezerwacja</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <ul>
+                <button id="toggleDarkMode">Tryb ciemny</button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <h2>Wypożycz sprzęt sportowy już teraz</h2>
+            <h4>Znajdź idealny sprzęt dla siebie i ciesz się sportem</h4>
+            
+            <p>Witamy w Wypożyczalni Sprzętu Sportowego – miejscu stworzonym z myślą o wszystkich miłośnikach aktywności fizycznej. Jeśli chcesz cieszyć się najlepszym sprzętem sportowym bez konieczności jego zakupu, nasza oferta jest dla Ciebie!</p>
+        
+            <h3>Nasza oferta:</h3>
+            <ul>
+                <li><strong>Sprzęt na każdą okazję:</strong> Narty, rowery, rakiety tenisowe i sprzęt piłkarski.</li>
+                <li><strong>Wysoka jakość:</strong> Każdy produkt jest starannie sprawdzany i przygotowywany do wynajmu.</li>
+                <li><strong>Elastyczne warunki:</strong> Wypożycz sprzęt na dzień, weekend lub dłuższy okres.</li>
+                <li><strong>Prosta rezerwacja:</strong> Szybko sprawdź dostępność i zarezerwuj online.</li>
+            </ul>
+        
+            <h3>Dlaczego warto wypożyczyć sprzęt?</h3>
+            <p>
+                Jeśli nie chcesz przechowywać rzadko używanego sprzętu lub nie jesteś pewien, czy dany sport Ci odpowiada, wynajem to idealne rozwiązanie. Dodatkowo, wynajem to oszczędność miejsca, czasu i pieniędzy.
+            </p>
+        
+            <h3>Doskonała opcja na każdą okazję</h3>
+            <p>Wypożyczamy sprzęt nie tylko dla indywidualnych użytkowników, ale także dla rodzin, grup przyjaciół i firm. Organizujesz imprezę sportową? Pomożemy dobrać odpowiedni sprzęt.</p>
+            
+            <h3>Wygodne i bezpieczne zakupy</h3>
+            <p>Nasze produkty są przeznaczone do łatwego użytkowania i zapewniają najwyższy komfort. Dbamy o każdy detal – wynajmując u nas, masz pewność jakości.</p>
+            
+            <div class="cta">
+                <button class="cta-button">Zarezerwuj teraz</button>
+            </div>
+        </section>
+
+        <section class="oferta" id="oferta">
+            <h2>Nasza oferta</h2>
+            <div class="rzeczy">
+                <div class="rzeczy-rzeczy">
+                    <img src="narty.png" alt="narty">
+                    <h3>Narty</h3>
+                    <p>Wypożycz narty na weekendową wycieczkę!</p>
+                </div>
+                <div class="rzeczy-rzeczy">
+                    <img src="jazda-na-rowerze-w-gorach-jak-sie-przygotowac-artilce.horizontal.large-img126619570.png" alt="rower">
+                    <h3>Rowery</h3>
+                    <p>Wypożycz rower na weekendową wycieczkę!</p>
+                </div>
+                <div class="rzeczy-rzeczy">
+                    <img src="sprzet-pilkarski-na-trawie_23-2147833422.avif" alt="pilka">
+                    <h3>Sprzęt piłkarski</h3>
+                    <p>Wypożycz sprzęt piłkarski na weekendową gierkę!</p>
+                </div>
+                <div class="rzeczy-rzeczy">
+                    <img src="rakietka.png" alt="rakieta">
+                    <h3>Rakiety do tenisa</h3>
+                    <p>Wypożycz rakietę na weekendowy mecz na korcie!</p>
+                </div>
+            </div>
+        </section>
+        <section class="cennik" id="cennik" style="display: none;">
+            <h2>Cennik</h2>
+            <table>
+                <tr>
+                    <th>Sprzęt</th>
+                    <th>Cena</th>
+                </tr>
+                <tr>
+                    <td>Narty</td>
+                    <td>50 PLN / dzień</td>
+                </tr>
+                <tr>
+                    <td>Rowery</td>
+                    <td>30 PLN / dzień</td>
+                </tr>
+                <tr>
+                    <td>Sprzęt piłkarski</td>
+                    <td>20 PLN / dzień</td>
+                </tr>
+                <tr>
+                    <td>Rakiety do tenisa</td>
+                    <td>25 PLN / dzień</td>
+                </tr>
+            </table>
+        </section>
+        <section class="rezerwacja" id="rezerwacja" style="display: none;">
+            <h2>Formularz rezerwacji</h2>
+            <form id="rezerwacjaForm">
+                <label for="name">Imię i nazwisko:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Telefon:</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <label for="sprzet">Wybierz sprzęt:</label>
+                <select id="sprzet" name="sprzet" required>
+                    <option value="narty">Narty</option>
+                    <option value="rower">Rower</option>
+                    <option value="pilka">Sprzęt piłkarski</option>
+                    <option value="rakieta">Rakieta do tenisa</option>
+                </select>
+                
+                <label for="date">Data rezerwacji:</label>
+                <input type="date" id="date" name="date" required>
+                
+                <label for="czas">Czas wynajmu (dni):</label>
+                <input type="number" id="czas" name="czas" min="1" required>
+                
+                <button type="submit">Zarezerwuj</button>
+            </form>
+        </section>
+        <section class="kontakt" id="kontakt" style="display: none;">
+            <h2>Kontakt</h2>
+            <p>Skontaktuj się z nami przez e-mail lub telefonicznie:</p>
+            <p>Email: kontakt@wypozyczalnia.pl</p>
+            <p>Telefon: 721 739 920</p>
+        </section>
+    </main>
+    <footer>
+        <p>Wypożyczalnia Sprzętu Sportowego | Kontakt: kontakt@wypozyczalnia.pl lub 721 739 920</p>
+    </footer>
+</body>
+<script src="Projekt.js"></script>
+</html>
